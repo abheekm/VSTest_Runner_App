@@ -19,7 +19,7 @@ namespace VSTest_Runner_App
             options.AddArgument("--disable-gpu"); // Optional but recommended in headless mode
             driver = new ChromeDriver(options);
             driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("https://10.64.1.98:30910/login");
+            driver.Navigate().GoToUrl("https://10.64.0.84:8080/login");
         }
 
         [TestCleanup]
@@ -41,7 +41,7 @@ namespace VSTest_Runner_App
             username.Click();
             username.SendKeys("root");
             password.Click();
-            password.SendKeys("root@123");
+            password.SendKeys("root@1234");
             loginButton.Click();
             Thread.Sleep(2000);
             actual = driver.FindElement(By.ClassName("bn-sidebar")).Displayed.ToString();
@@ -61,7 +61,7 @@ namespace VSTest_Runner_App
             username.Click();
             username.SendKeys("root");
             password.Click();
-            password.SendKeys("root@123");
+            password.SendKeys("root@1234");
             loginButton.Click();
             Thread.Sleep(2000);
             actual = driver.FindElement(By.ClassName("bn-sidebar")).Displayed.ToString();
@@ -172,7 +172,7 @@ namespace VSTest_Runner_App
             username.Click();
             username.SendKeys("root");
             password.Click();
-            password.SendKeys("root@123");
+            password.SendKeys("root@1234");
             loginButton.Click();
             Thread.Sleep(2000);
             actual = driver.FindElement(By.ClassName("bn-sidebar")).Displayed.ToString();
@@ -192,7 +192,7 @@ namespace VSTest_Runner_App
             username.Click();
             username.SendKeys("root");
             password.Click();
-            password.SendKeys("root@123");
+            password.SendKeys("root@1234");
             loginButton.Click();
             Thread.Sleep(2000);
             actual = driver.FindElement(By.ClassName("bn-sidebar")).Displayed.ToString();
@@ -212,7 +212,7 @@ namespace VSTest_Runner_App
             username.Click();
             username.SendKeys("root");
             password.Click();
-            password.SendKeys("root@123");
+            password.SendKeys("root@1234");
             loginButton.Click();
             Thread.Sleep(2000);
             actual = driver.FindElement(By.ClassName("bn-sidebar")).Displayed.ToString();
