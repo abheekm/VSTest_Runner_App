@@ -1,0 +1,17 @@
+﻿name: VSTest_Runner_App_YML
+description: This is VSTest_Runner_App_YML sample
+version: 1.0
+settings:
+    - name: Build
+      key: runner_msbuild1
+      args:
+        parameters: /t:restore /p:Configuration=Debug /t:Rebuild
+        solution: VSTest_Runner_App.sln
+    - name: Test
+      key: runner_vstest1
+      args:
+        testAssembly: bin\Debug\net8.0\VSTest_Runner_App.dll
+    - name: Sample
+      condition: buildSucceeds1
+      paths:
+        - '*'
