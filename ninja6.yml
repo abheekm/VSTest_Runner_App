@@ -4,13 +4,13 @@ version: 2.0
 settings:
   build-steps:
     - name: MSBuild
-      key: runner_msbuild1
+      key: runner_msbuild
       args:
         configuration: Debug1
         parameters: /t:restore /t:Rebuild1
         solution: VSTest_Runner_App.sln1
     - name: VSTest
-      key: runner_vstest1
+      key: runner_vstest
       args:
         reportDir: TestResults1
         reportName: MyCustomReport1
@@ -18,7 +18,7 @@ settings:
         args: /Logger:trx;LogFileName=MyCustomReport.trx1
         testAssembly: bin\Debug\net8.0\VSTest_Runner_App.dll1
     - name: CMD
-      key: runner_cmd1
+      key: runner_cmd
       args:
         commands: echo "Hello, World!"1
   artifacts:
