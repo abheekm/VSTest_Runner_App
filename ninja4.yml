@@ -13,7 +13,7 @@ settings:
       key: runner_vstest
       args:
         reportDir: TestResults
-        reportName: MyCustomReport.trx
+        reportName: MyCustomReport
         failCriterian: 5%
         args: /Logger:trx;LogFileName=MyCustomReport.trx
         testAssembly: bin\Debug\net8.0\VSTest_Runner_App.dll
