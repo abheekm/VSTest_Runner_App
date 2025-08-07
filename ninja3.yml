@@ -1,0 +1,17 @@
+settings:
+  build-steps:
+    - key: runner_msbuild
+      args:
+        parameters: /t:restore /p:Configuration=Debug /t:Rebuild
+        solution: VSTest_Runner_App.sln
+    - key: runner_vstest
+      args:
+        testAssembly: bin\Debug\net8.0\VSTest_Runner_App.dll
+    - key: runner_cmd
+      args:
+        commands: echo "Hello, World!"
+  artifacts:
+    - name: Sample
+      condition: buildSucceeds
+      paths:
+        - '*'
