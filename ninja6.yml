@@ -23,6 +23,6 @@ settings:
         commands: echo "Hello, World!"1
   artifacts:
     - name: Sample1
-      condition: buildSucceeds1
+      condition: buildSucceeds
       paths:
         - '*1'
