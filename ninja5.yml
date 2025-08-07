@@ -1,8 +1,8 @@
-name1: VSTest_Runner_App_YML
-description1: This is VSTest_Runner_App_YML sample
-version1: 1.0
-settings1:
-  build-steps:
+name: VSTest_Runner_App_YML
+description: This is VSTest_Runner_App_YML sample
+version: 1.0
+settings:
+  build-steps-invalid:
     - name: MSBuild
       key: runner_msbuild
       args:
