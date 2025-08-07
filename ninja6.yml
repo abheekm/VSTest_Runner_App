@@ -1,0 +1,28 @@
+name: VSTest_Runner_App_YML
+description: This is VSTest_Runner_App_YML sample
+version: 2.0
+settings:
+  build-steps:
+    - name: MSBuild
+      key: runner_msbuild1
+      args:
+        configuration: Debug1
+        parameters: /t:restore /t:Rebuild1
+        solution: VSTest_Runner_App.sln1
+    - name: VSTest
+      key: runner_vstest1
+      args:
+        reportDir: TestResults1
+        reportName: MyCustomReport1
+        failCriterian: 5%1
+        args: /Logger:trx;LogFileName=MyCustomReport.trx1
+        testAssembly: bin\Debug\net8.0\VSTest_Runner_App.dll1
+    - name: CMD
+      key: runner_cmd1
+      args:
+        commands: echo "Hello, World!"1
+  artifacts:
+    - name: Sample1
+      condition: buildSucceeds1
+      paths:
+        - '*1'
