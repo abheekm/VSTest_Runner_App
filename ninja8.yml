@@ -1,0 +1,14 @@
+name: VSTest_Runner_App_YML
+description: This is VSTest_Runner_App_YML sample
+version: 1.0
+settings:
+  build-steps:
+    - name: Test
+      key: runner_vstest
+      args:
+        testAssembly: bin\Debug\net8.0\VSTest_Runner_App.dll
+  artifacts:
+    - name: Sample
+      condition: buildSucceeds
+      paths:
+        - '*'
